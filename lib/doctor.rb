@@ -29,7 +29,7 @@ class Doctor
 
   def patients
     p = []
-    @a.all.collect do |appointment|
+    @a.collect do |appointment|
       @a.patient
     end
   end
