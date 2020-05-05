@@ -18,7 +18,7 @@ class Doctor
   end
 
   def appointments
-    a = []
+    @a = []
     Appointment.all.select do |appointment|
      a << appointment.doctor == self
     end
@@ -28,6 +28,7 @@ class Doctor
 
 
   def patients
+    p = []
     appointments.all.collect do |appointment|
       appointment.patient
     end
