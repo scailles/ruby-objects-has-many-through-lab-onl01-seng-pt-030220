@@ -25,11 +25,6 @@ class Patient
   end
 
   def doctors
-    d=[]
-    Appointment.all.map do |appointment|
-     d << appointment.doctor==self
-    end
-    d.uniq
   end
   
   
