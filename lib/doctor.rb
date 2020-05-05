@@ -29,8 +29,8 @@ class Doctor
 
   def patients
     p = []
-    appointments.all.collect do |appointment|
-      appointment.patient
+    @a.all.collect do |appointment|
+      @a.patient
     end
   end
   
