@@ -20,9 +20,9 @@ class Doctor
   def appointments
     @a = []
     Appointment.all.select do |appointment|
-     a << appointment.doctor == self
+     @a << appointment.doctor == self
     end
-    a
+    @a
   end
   
 
