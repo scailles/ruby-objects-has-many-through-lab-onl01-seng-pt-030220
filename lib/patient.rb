@@ -27,7 +27,7 @@ class Patient
   def doctors
     d=[]
     Appointment.all.map do |appointment|
-     d << appointment.doctor==self
+     {d << appointment.doctor==self}.uniq
     end
     d
   end
