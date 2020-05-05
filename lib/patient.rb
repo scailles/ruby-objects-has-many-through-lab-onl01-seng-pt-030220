@@ -25,8 +25,12 @@ class Patient
   end
 
   def doctors
+    d=[]
     Appointment.all.map do |appointment|
-     puts appointment.doctor==self
+     d << appointment.doctor==self
     end
+    d
   end
+  
+  
 end
